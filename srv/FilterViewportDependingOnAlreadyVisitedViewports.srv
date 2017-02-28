@@ -1,0 +1,4 @@
+asr_msgs/AsrViewport viewport
+---
+asr_msgs/AsrViewport filteredViewport
+bool isBeenFiltered

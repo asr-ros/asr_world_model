@@ -1,0 +1,3 @@
+string object_type
+---
+asr_msgs/AsrViewport[] viewport_list

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package>
+  <name>asr_world_model</name>
+  <version>1.0.0</version>
+  <description>
+    This package contains a model which holds three types of information:
+      1. All estimations of objects which were localized by object detection
+      2. All views in which objects of given types have been searched due to advice of next_best_view
+      3. The 2D map used e.g. for navigation or next_best_view calculations
+  </description>
+  <author>Aumann Florian, Borella Jocelyn, Hutmacher Robin, Karrenbauer Oliver, Meißner Pascal, Schleicher Ralf, Stöckle Patrick, Trautmann Jeremias</author>
+  <maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>asr_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>asr_object_database</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>asr_lib_ism</build_depend>
+  <build_depend>asr_rapidxml</build_depend>
+  
+  <run_depend>message_runtime</run_depend>
+  <run_depend>cmake_modules</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>asr_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>asr_object_database</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>asr_lib_ism</run_depend>
+  <run_depend>asr_rapidxml</run_depend>
+  <run_depend>asr_robot_model_services</run_depend>
+
+
+</package>

@@ -1,0 +1,4 @@
+#PLEASE note that a ; at the end leads to an undefined behavior from world model
+recognizers_string_map : "Smacks,textured;Cup,segmentable;VitalisSchoko,textured;PlateDeep,segmentable;PlateDeep,segmentable;CoffeeBox,textured;CoffeeFilters2,textured"
+weight_string_map : "Smacks,1;Cup,1;VitalisSchoko,1;PlateDeep,1;PlateDeep,1;CoffeeBox,1;CoffeeFilters2,1"
+object_string_map : "CoffeeBox&0,1;CoffeeFilters2&0,1;Cup&054012012100,1;PlateDeep&027052031100,1;PlateDeep&054042013100,1;Smacks&0,1;VitalisSchoko&0,1"

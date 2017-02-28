@@ -1,0 +1,34 @@
+#Sampling additional object poses for recognition result to consider pose uncertainty
+enable_object_sampling: false
+#If true the deviations for sampling a found_object will be calculated depending on bin_size and maxProjectionAngleDeviation,
+#otherwise they will be loaded from the object_database
+calculate_deviations: true
+
+#The number of additional object poses per axis * 2 (* 2, because it will be samples in +axis and -axis)
+deviation_number_of_samples_position: 0
+deviation_number_of_samples_orientation: 1
+
+#Specify the object which should be sampled to reduce the combinatorial explosion. Leave blank ("") to sample all objects
+objects_to_sample: HMilkBio,0;MultivitaminJuice,0;
+
+#Threshold Vars (Determines the maximum distance between two poses to be considered a neighbor)
+object_position_distance_threshold: 0.02
+object_orientation_rad_distance_threshold: 0.1
+
+#Thresholds when two viewports will be seen as approx equale
+viewport_position_distance_threshold: 0.225
+viewport_orientation_rad_distance_threshold: 0.2618 # ~15°
+
+#The minimum number of neighbors that a cluster needs to considered for the best object list
+object_rating_min_count: 2
+
+#If true the file from the intermediate_object_generator will not be used nor generated. All weights will be the same
+use_default_intermediate_object_weight: true
+#The default_intermediate_object_weight will be used if use_default_intermediate_object_weight is true or the intermediate_object_generator does not work right
+default_intermediate_object_weight: 1.0
+
+#If true the object_count, weights and recognizer_name will be parsed from the world_description, otherwise the information will be gained from the sqlTabel
+use_world_description: false
+
+#The different level of debug
+debugLevels: ALL #ALL, NONE, PARAMETERS, SERVICE_CALLS, COMMON_INFORMATION, FOUND_OBJECT, VIEW_PORT, COMPLETE_PATTERN
