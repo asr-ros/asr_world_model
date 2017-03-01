@@ -5,8 +5,9 @@
   <description>
     This package contains a model which holds three types of information:
       1. All estimations of objects which were localized by object detection
-      2. All views in which objects of given types have been searched due to advice of next_best_view
-      3. The 2D map used e.g. for navigation or next_best_view calculations
+      2. All views in which objects of given types have been searched due to advice of next_best_view and asr_direct_search_manager
+      3. All recognized complete patterns by the recognizer_prediction_ism
+      4. Some additional information about the Objects: IntermediateObjectWeight, RecognizerName
   </description>
   <author>Aumann Florian, Borella Jocelyn, Hutmacher Robin, Karrenbauer Oliver, Meißner Pascal, Schleicher Ralf, Stöckle Patrick, Trautmann Jeremias</author>
   <maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer>
