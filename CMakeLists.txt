@@ -30,7 +30,6 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(cmake_modules)
 find_package(Boost REQUIRED COMPONENTS system)
 find_package(Eigen REQUIRED)
-find_package(PCL REQUIRED)
 
 generate_dynamic_reconfigure_options(rsc/DynamicParameters.cfg)
 
@@ -80,7 +79,6 @@ catkin_package(
 include_directories(
   include
   ${Eigen_INCLUDE_DIRS}
-  ${PCL_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 FILE(GLOB_RECURSE HEADERS "include/*.hpp"  "include/*.h")
