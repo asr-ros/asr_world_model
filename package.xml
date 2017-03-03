@@ -3,9 +3,9 @@
   <name>asr_world_model</name>
   <version>1.0.0</version>
   <description>
-    This package contains a model which holds three types of information:
+    This package contains a model which holds four types of information:
       1. All estimations of objects which were localized by object detection
-      2. All views in which objects of given types have been searched due to advice of next_best_view and asr_direct_search_manager
+      2. All views in which objects of given types have been searched due to advice of asr_next_best_view and asr_direct_search_manager
       3. All recognized complete patterns by the recognizer_prediction_ism
       4. Some additional information about the Objects: IntermediateObjectWeight, RecognizerName
   </description>
