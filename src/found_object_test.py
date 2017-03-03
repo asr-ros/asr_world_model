@@ -28,7 +28,7 @@ from actionlib import *
 from actionlib.msg import *
 from asr_robot_model_services.msg import RobotStateMessage
 from asr_robot_model_services.srv import CalculateCameraPose
-from next_best_view.srv import TriggerFrustumVisualization
+from asr_next_best_view.srv import TriggerFrustumVisualization
 from sensor_msgs.msg import JointState
 from asr_world_model.srv import PushFoundObject, PushFoundObjectList
 

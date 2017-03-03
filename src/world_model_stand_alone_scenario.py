@@ -27,8 +27,8 @@ from geometry_msgs.msg import (Pose, PoseWithCovariance, PoseWithCovarianceStamp
 from asr_msgs.msg import AsrObject
 from actionlib import *
 from actionlib.msg import *
-from next_best_view.msg import RobotStateMessage
-from next_best_view.srv import CalculateCameraPose, TriggerFrustumVisualization, GetPose
+from asr_next_best_view.msg import RobotStateMessage
+from asr_next_best_view.srv import CalculateCameraPose, TriggerFrustumVisualization, GetPose
 from sensor_msgs.msg import JointState
 from asr_world_model.srv import PushFoundObject, PushFoundObjectList, GetFoundObjectList, EmptyViewportList
 
