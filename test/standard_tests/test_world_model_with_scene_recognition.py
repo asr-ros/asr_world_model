@@ -21,7 +21,7 @@ import unittest
 import rospy
 from asr_msgs.msg import AsrObject
 from asr_world_model.srv import PushFoundObject, PushFoundObjectRequest, GetFoundObjectList
-from recognizer_prediction_ism.srv import FindScenes, FindScenesRequest, GetPointCloud
+from asr_recognizer_prediction_ism.srv import FindScenes, FindScenesRequest, GetPointCloud
 from std_srvs.srv import Empty
 from geometry_msgs.msg import Pose, PoseWithCovariance
 

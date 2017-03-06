@@ -19,7 +19,7 @@ from asr_msgs.msg import AsrObject
 from asr_world_model.srv import PushFoundObject, PushFoundObjectRequest, GetFoundObjectList
 from geometry_msgs.msg import Pose, PoseWithCovariance
 from std_srvs.srv import Empty
-from recognizer_prediction_ism.srv import FindScenes, FindScenesRequest, GetPointCloud
+from asr_recognizer_prediction_ism.srv import FindScenes, FindScenesRequest, GetPointCloud
 
 class WorldModelRecognizerPredictionTest(unittest.TestCase):
 
