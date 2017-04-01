@@ -420,8 +420,8 @@ void WorldModel::advertiseServices() {
                                                                                     common_information_handler_ptr_);
 
     get_all_objects_list_service_server_ = local_handle_.advertiseService(CommonInformationHandler::GetGetAllObjectsListServiceName(),
-                                                                          &CommonInformationHandler::processGetAllObjectsListServiceCall,
-                                                                          common_information_handler_ptr_);
+                                                                          &WorldModel::processGetAllObjectsListServiceCall,
+                                                                          this);
 
     get_missing_object_list_service_server_ = local_handle_.advertiseService(CommonInformationHandler::GetGetMissingObjectListServiceName(),
                                                                              &CommonInformationHandler::processGetMissingObjectListServiceCall,
@@ -456,6 +456,21 @@ bool WorldModel::processEmptyFoundObjectListServiceCall(std_srvs::Empty::Request
         initParams();
     }
     return success;
+}
+
+bool WorldModel::processGetAllObjectsListServiceCall(asr_world_model::GetAllObjectsList::Request &request, asr_world_model::GetAllObjectsList::Response &response) {
+    std::string mydbfilename;
+    local_handle_.getParam("dbfilename", mydbfilename);
+    checkParametersFromOtherNode();
+    std::string newMydbfilename;
+    local_handle_.getParam("dbfilename", newMydbfilename);
+
+    if (mydbfilename != newMydbfilename) {
+        ROS_INFO_STREAM("dbfilename changed");
+        model_type_ptr_per_type_map_ptr_->clear();
+        initParams();
+    }
+    return common_information_handler_ptr_->processGetAllObjectsListServiceCall(request, response);
 }
 
 }

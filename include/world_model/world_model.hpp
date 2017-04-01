@@ -182,6 +182,7 @@ void initMapsFromWorldDescription();
 void advertiseServices();
 
 bool processEmptyFoundObjectListServiceCall(std_srvs::Empty::Request &request, std_srvs::Empty::Response &response);
+bool processGetAllObjectsListServiceCall(asr_world_model::GetAllObjectsList::Request &request, asr_world_model::GetAllObjectsList::Response &response);
 
 };
 
