@@ -1,7 +1,7 @@
 <launch>
     <env name="ROSCONSOLE_CONFIG_FILE" value="$(find asr_world_model)/log/rosconsole.config" />
     <node pkg="asr_world_model" type="asr_world_model" name="asr_world_model" ns="env" output="screen">
-        <rosparam file="$(find asr_world_model)/rsc/world_model_settings.yaml" />
+        <rosparam file="$(find asr_world_model)/param/world_model_settings.yaml" />
         <rosparam file="$(find asr_world_model)/rsc/world_descriptions/world_description.yaml" />
         <!-- Needed to get bin_size and maxProjectionAngleDeviation -->
         <!-- Needed to get the dbfilename -->
