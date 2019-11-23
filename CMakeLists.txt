@@ -18,7 +18,6 @@ else()
 endif()
 
 find_package(catkin REQUIRED COMPONENTS
-  asr_msgs
   roscpp
   rospy
   message_generation
@@ -26,6 +25,7 @@ find_package(catkin REQUIRED COMPONENTS
   visualization_msgs
   eigen_conversions
   tf
+  asr_msgs
   asr_object_database
   dynamic_reconfigure
   asr_lib_ism
@@ -109,7 +109,7 @@ target_link_libraries(
 )
 
 add_dependencies(${PROJECT_NAME}
-    asr_msgs_gencpp
+    asr_msgs_generate_messages_cpp
     ${PROJECT_NAME}_gencpp
     asr_object_database_gencpp
 )
