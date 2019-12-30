@@ -27,7 +27,7 @@ use_default_intermediate_object_weight: true
 #The default_intermediate_object_weight will be used if use_default_intermediate_object_weight is true or the intermediate_object_generator does not work right
 default_intermediate_object_weight: 1.0
 
-#If true the object_count, weights and recognizer_name will be parsed from the world_description, otherwise the information will be gained from the sqlTabel
+#If true the object_count, weights and recognizer_name will be parsed from the world_description, otherwise the information will be gained from the sqlTable
 use_world_description: false
 
 #The different level of debug

@@ -230,7 +230,7 @@ bool FoundObjectHandler::sampleFoundObject(asr_msgs::AsrObject &candidate) {
     } else {
         const std::string &recognizerName = (*model_type_ptr_per_type_map_ptr_)[candidate.type]->recognizerName;
         if (recognizerName.size() == 0) {
-            ROS_ERROR_STREAM("RecognizerName for type/id" << candidate.type << "/" << candidate.identifier << " not found: Please check the ISM_Tabel.");
+            ROS_ERROR_STREAM("RecognizerName for type/id" << candidate.type << "/" << candidate.identifier << " not found: Please check the ISM_Table.");
             return false;
         }
 

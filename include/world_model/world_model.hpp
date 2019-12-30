@@ -175,7 +175,7 @@ void dynamicReconfigureCallback(asr_world_model::DynamicParametersConfig &config
 void checkParametersFromOtherNode();
 
 void initParams();
-void initMapsFromSqlTabel();
+void initMapsFromSqlTable();
 void initIntermediateObjectWeights(const ISM::TableHelperPtr &table_helper);
 void initMapsFromWorldDescription();
 

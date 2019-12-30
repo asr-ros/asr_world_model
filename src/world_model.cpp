@@ -141,7 +141,7 @@ void WorldModel::initParams() {
     if (settings_ptr_->use_world_description) {
         initMapsFromWorldDescription();
     } else {
-        initMapsFromSqlTabel();
+        initMapsFromSqlTable();
     }
 
     //Log parsed values
@@ -201,7 +201,7 @@ void WorldModel::initMapsFromWorldDescription() {
 
 }
 
-void WorldModel::initMapsFromSqlTabel() {
+void WorldModel::initMapsFromSqlTable() {
     ros::ServiceClient recognizerListServiceClient = local_handle_.serviceClient<asr_object_database::RecognizerList>(WorldModel::GetClientGetRecognizerListServiceName());
     //Duration is buggy here
     ROS_INFO("Wait for asr_object_database to existence");
@@ -230,8 +230,8 @@ void WorldModel::initMapsFromSqlTabel() {
         }
         std::map<std::string, boost::filesystem::path>::const_iterator path_it = ressourcePaths.find(objectTypeAndId.first);
         if (path_it == ressourcePaths.end()) {
-            ROS_WARN_STREAM("No ressourcePath for type/id: " << objectTypeAndId.first << "/" << objectTypeAndId.second <<
-                            " in ISM_Tabel found -> will not be used in world_model");
+            ROS_WARN_STREAM("No resourcePath for type/id: " << objectTypeAndId.first << "/" << objectTypeAndId.second <<
+                            " in ISM_Table found -> will not be used in world_model");
             continue;
         }
 
