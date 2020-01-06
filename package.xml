@@ -3,10 +3,10 @@
   <name>asr_world_model</name>
   <version>1.0.0</version>
   <description>
-    This package contains a model which holds four types of information:
-      1. All estimations of objects which were localized by object detection
+    This package implements the logic of our Online World Model, while the Offline Knowledge Base is distributed across asr_object_database, mild_navigation and asr_visualization_server. It contains four types of information:
+      1. All estimations of objects which were localized by object detection (object models)
       2. All views in which objects of given types have been searched due to advice of asr_next_best_view and asr_direct_search_manager
-      3. All recognized complete patterns by the recognizer_prediction_ism
+      3. All recognized complete patterns by the recognizer_prediction_ism (scene models)
       4. Some additional information about the Objects: IntermediateObjectWeight, RecognizerName
   </description>
   <author>Aumann Florian, Borella Jocelyn, Hutmacher Robin, Karrenbauer Oliver, Meißner Pascal, Schleicher Ralf, Stöckle Patrick, Trautmann Jeremias</author>
